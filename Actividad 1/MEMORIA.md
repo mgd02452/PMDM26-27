@@ -49,7 +49,7 @@
 - [x] Comprime el proyecto en un .zip (excluyendo build/ y .gradle/).
 
 ### Entregables
-- [x] Enlace github a la actividad (opcional).#
+- [x] Enlace github a la actividad (opcional).
 
 https://github.com/mgd02452/PMDM26-27.git
 
