@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MiApp</string>
+
+    <string name="logo_desc">Logo de la aplicación</string>
+    <string name="titulo_bienvenida">Bienvenido/a</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+
+    <!-- Reto 5 -->
+    <string name="hint_confirm_password">Confirmar contraseña</string>
+    <string name="error_confirm_password">Las contraseñas no coinciden</string>
+
+    <string name="recordar_sesion">Recordar sesión</string>
+    <string name="boton_entrar">ENTRAR</string>
+    <string name="olvidaste_password">¿Olvidaste tu contraseña?</string>
+    <string name="toggle_password">Mostrar u ocultar contraseña</string>
+
+    <string name="error_email">Introduce un email válido</string>
+    <string name="error_password">Mínimo 8 caracteres, una mayúscula y un número</string>
+    <string name="login_correcto">Login correcto</string>
+    <string name="titulo_home">¡Bienvenido a Home!</string>
+</resources>

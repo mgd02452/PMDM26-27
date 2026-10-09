@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MiApp</string>
+    <string name="logo_desc">Aplication logo</string>
+    <string name="titulo_bienvenida">Welcome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="error_confirm_password">Passwords do not match</string>
+    <string name="recordar_sesion">Remember sesion</string>
+    <string name="boton_entrar">LOG IN</string>
+    <string name="olvidaste_password">Forgot your password?</string>
+    <string name="toggle_password">Show or hide password</string>
+    <string name="error_email">Enter a valid email address</string>
+    <string name="error_password">Minimum 8 characters, one uppercase letter, and one number</string>
+    <string name="login_correcto">Successful login</string>
+    <string name="titulo_home">Welcome Home!</string>
+</resources>
