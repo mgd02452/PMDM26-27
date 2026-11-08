@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">MiApp</string>
+
+    <string name="logo_desc">Logo de la aplicación</string>
+    <string name="titulo_bienvenida">Bienvenido/a</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+
+    <!-- [RETO 3 - NOMBRE]: textos nuevos -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="error_nombre">Introduce tu nombre</string>
+    <string name="home_bienvenida_nombre">¡Bienvenido, %1$s!</string>
+
+    <!-- [RETO 4]: BottomAppBar y pantalla de perfil -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="titulo_perfil">Perfil</string>
+    <string name="perfil_texto">Aquí irá tu perfil</string>
+
+    <!-- [RETO 5]: contador de caracteres de la contraseña -->
+    <string name="contador_password">%1$d/8 caracteres mínimos</string>
+
+    <!-- Reto 5 -->
+    <string name="error_confirm_password">Las contraseñas no coinciden</string>
+
+    <string name="recordar_sesion">Recordar sesión</string>
+    <string name="boton_entrar">ENTRAR</string>
+    <string name="olvidaste_password">¿Olvidaste tu contraseña?</string>
+    <string name="toggle_password">Mostrar u ocultar contraseña</string>
+
+    <string name="error_email">Introduce un email válido</string>
+    <string name="error_password">Mínimo 8 caracteres, una mayúscula y un número</string>
+    <string name="login_correcto">Login correcto</string>
+    <string name="titulo_home">¡Bienvenido a Home!</string>
+
+    <!-- Registro -->
+    <string name="titulo_registro">Crear cuenta</string>
+    <string name="hint_confirm_password">Confirmar contraseña</string>
+    <string name="acepto_terminos">Acepto los términos y condiciones</string>
+    <string name="boton_crear_cuenta">CREAR CUENTA</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="volver">Volver</string>
+
+    <!-- Home -->
+    <string name="home_bienvenida">¡Bienvenido, %1$s!</string>
+    <string name="home_sin_email">¡Bienvenido!</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_cerrar_sesion">Cerrar sesión</string>
+    <string name="dialog_acerca_titulo">Acerca de</string>
+    <string name="dialog_acerca_texto">MiApp v1.0\nDesarrollada por 2º DAM\nProgramación Multimedia y Dispositivos Móviles</string>
+    <string name="dialog_aceptar">Aceptar</string>
+    <string name="dialog_cancelar">Cancelar</string>
+    <string name="abrir_menu">Abrir menú</string>
+    <!--reto 1: cerrar session -->
+    <string name="dialog_logout_titulo">¿Cerrar sesión?</string>
+    <string name="dialog_logout_texto">Se cerrará tu sesión actual.</string>
+    <!-- reto 2: icono-->
+    <string name="acerca_de_icono">Acerca de</string>
+
+    <!-- CRUD Videojuegos -->
+    <string name="home_titulo_lista">Mis videojuegos</string>
+    <string name="home_lista_vacia">Todavía no has añadido videojuegos.\nPulsa + para añadir el primero.</string>
+    <string name="boton_add_videojuego">Añadir videojuego</string>
+    <string name="dialog_nuevo_titulo">Nuevo videojuego</string>
+    <string name="dialog_editar_titulo">Editar videojuego</string>
+    <string name="hint_titulo_juego">Título</string>
+    <string name="hint_plataforma">Plataforma (ej: PS5, Switch, PC)</string>
+    <string name="hint_genero">Género (ej: RPG, Aventura)</string>
+    <string name="hint_anyo">Año</string>
+    <string name="hint_nota">Nota (0-10)</string>
+    <string name="check_completado">Completado</string>
+    <string name="boton_guardar">Guardar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="dialog_borrar_titulo">Borrar videojuego</string>
+    <string name="dialog_borrar_texto">¿Seguro que quieres borrar "%1$s"? Esta acción no se puede deshacer.</string>
+    <string name="boton_borrar">Borrar</string>
+    <string name="cd_borrar_juego">Borrar videojuego</string>
+    <string name="cd_marcar_completado">Marcar como completado</string>
+    <string name="error_titulo_vacio">El título no puede estar vacío</string>
+    <string name="error_anyo_invalido">Introduce un año válido</string>
+    <string name="error_nota_invalida">La nota debe estar entre 0 y 10</string>
+
+    <string name="notif_titulo">Videojuego añadido</string>
+    <string name="notif_mensaje">%1$s se ha añadido a tu colección</string>
+
+    <!-- reto 1: Borrar todo -->
+    <string name="menu_borrar_todo">Borrar todo</string>
+    <string name="dialog_borrar_todo_titulo">Borrar todos los videojuegos</string>
+    <string name="dialog_borrar_todo_texto">¿Seguro que quieres borrar toda tu coleccion? Esta accion no se puede deshacer.</string>
+
+    <!-- reto 2: cambiar filtro -->
+    <string name="hint_filtro_genero">Filtrar por genero</string>
+    <string name="home_sin_resultados">Ningun videojuego coincide con el filtro.</string>
+
+    <!-- reto 3: marcar completado -->
+    <string name="notif_completado_titulo">Videojuego completado</string>
+    <string name="notif_completado_mensaje">¡%1$s completado!</string>
+
+    <!-- Reto 4 -->
+    <string name="orden_boton">Ordenar</string>
+    <string name="orden_titulo">Título</string>
+    <string name="orden_nota">Nota</string>
+    <string name="orden_anyo">Año</string>
+
+    <!-- Reto 6 -->
+    <string name="menu_exportar_json">Exportar a JSON</string>
+    <string name="export_ok">Exportado en: %1$s</string>
+
+</resources>

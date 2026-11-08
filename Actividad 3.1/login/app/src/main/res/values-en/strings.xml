@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">MyApp</string>
+
+    <string name="logo_desc">App logo</string>
+    <string name="titulo_bienvenida">Welcome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    <!-- [RETO 3 - NOMBRE]: new texts -->
+    <string name="hint_nombre">Name</string>
+    <string name="error_nombre">Enter your name</string>
+    <string name="home_bienvenida_nombre">Welcome, %1$s!</string>
+
+    <!-- [RETO 4]: BottomAppBar and profile screen -->
+    <string name="nav_inicio">Home</string>
+    <string name="nav_perfil">Profile</string>
+    <string name="titulo_perfil">Profile</string>
+    <string name="perfil_texto">Your profile will go here</string>
+
+    <!-- [RETO 5]: password character counter -->
+    <string name="contador_password">%1$d/8 characters minimum</string>
+
+    <!-- Reto 5 -->
+    <string name="error_confirm_password">Passwords do not match</string>
+
+    <string name="recordar_sesion">Remember me</string>
+    <string name="boton_entrar">SIGN IN</string>
+    <string name="olvidaste_password">Forgot your password?</string>
+    <string name="toggle_password">Show or hide password</string>
+
+    <string name="error_email">Enter a valid email</string>
+    <string name="error_password">At least 8 characters, one uppercase letter and one number</string>
+    <string name="login_correcto">Login successful</string>
+    <string name="titulo_home">Welcome to Home!</string>
+
+    <!-- Register -->
+    <string name="titulo_registro">Create account</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="acepto_terminos">I accept the terms and conditions</string>
+    <string name="boton_crear_cuenta">CREATE ACCOUNT</string>
+    <string name="ya_tienes_cuenta">Already have an account? Sign in</string>
+    <string name="volver">Back</string>
+
+    <!-- Home -->
+    <string name="home_bienvenida">Welcome, %1$s!</string>
+    <string name="home_sin_email">Welcome!</string>
+    <string name="menu_acerca_de">About</string>
+    <string name="menu_cerrar_sesion">Sign out</string>
+    <string name="dialog_acerca_titulo">About</string>
+    <string name="dialog_acerca_texto">MyApp v1.0\nDeveloped by 2nd-year DAM\nMultimedia Programming and Mobile Devices</string>
+    <string name="dialog_aceptar">OK</string>
+    <string name="dialog_cancelar">Cancel</string>
+    <string name="abrir_menu">Open menu</string>
+    <!-- reto 1: sign out -->
+    <string name="dialog_logout_titulo">Sign out?</string>
+    <string name="dialog_logout_texto">Your current session will be closed.</string>
+    <!-- reto 2: icon -->
+    <string name="acerca_de_icono">About</string>
+
+    <!-- Video Games CRUD -->
+    <string name="home_titulo_lista">My Video Games</string>
+    <string name="home_lista_vacia">No video games have been added yet.\nTap + to add your first one.</string>
+    <string name="boton_add_videojuego">Add Video Game</string>
+    <string name="dialog_nuevo_titulo">New Video Game</string>
+    <string name="dialog_editar_titulo">Edit Video Game</string>
+    <string name="hint_titulo_juego">Title</string>
+    <string name="hint_plataforma">Platform (e.g., PS5, Switch, PC)</string>
+    <string name="hint_genero">Genre (e.g., RPG, Adventure)</string>
+    <string name="hint_anyo">Year</string>
+    <string name="hint_nota">Rating (0–10)</string>
+    <string name="check_completado">Completed</string>
+    <string name="boton_guardar">Save</string>
+    <string name="boton_cancelar">Cancel</string>
+    <string name="dialog_borrar_titulo">Delete Video Game</string>
+    <string name="dialog_borrar_texto">Are you sure you want to delete "%1$s"? This action cannot be undone.</string>
+    <string name="boton_borrar">Delete</string>
+    <string name="cd_borrar_juego">Delete video game</string>
+    <string name="cd_marcar_completado">Mark as completed</string>
+    <string name="error_titulo_vacio">The title cannot be empty</string>
+    <string name="error_anyo_invalido">Enter a valid year</string>
+    <string name="error_nota_invalida">The rating must be between 0 and 10</string>
+
+    <string name="notif_titulo">Video Game Added</string>
+    <string name="notif_mensaje">%1$s has been added to your collection</string>
+
+    <!-- challenge 1: Delete all -->
+    <string name="menu_borrar_todo">Delete all</string>
+    <string name="dialog_borrar_todo_titulo">Delete all video games</string>
+    <string name="dialog_borrar_todo_texto">Are you sure you want to delete your entire collection? This action cannot be undone.</string>
+
+    <!-- Challenge 2: change filter -->
+    <string name="hint_filtro_genero">Filter by genre</string>
+    <string name="home_sin_resultados">No video games match the filter.</string>
+
+    <!-- challenge 3: Mark as completed -->
+    <string name="notif_completado_titulo">Video game completed</string>
+    <string name="notif_completado_mensaje">%1$s completed!</string>
+
+    <!-- Challenge 4 -->
+    <string name="orden_boton">Sort</string>
+    <string name="orden_titulo">Title (A-Z)</string>
+    <string name="orden_nota">Rating (highest to lowest)</string>
+    <string name="orden_anyo">Year (newest first)</string>
+
+    <!-- Challenge 6 -->
+    <string name="menu_exportar_json">Export to JSON</string>
+    <string name="export_ok">Exported to: %1$s</string>
+</resources>
