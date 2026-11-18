@@ -2,6 +2,8 @@
 
 PMDM · 2º DAM · Informe UI/UX · Autor/a: Andrea Milena Vega Mora
 
+Repositorio Git: [https://github.com/mgd02452/PMDM26-27.git](https://github.com/mgd02452/PMDM26-27.git)
+
 ## 1. Introducción
 
 En esta actividad se ha ampliado la aplicación de la Actividad 2.2 (Login, Registro y Home con `NavHost` y `Scaffold`) para dotarla de persistencia real. La sesión del usuario se guarda con **DataStore**, la colección de videojuegos con **Room**, la interfaz se actualiza de forma reactiva con **Flow**, se añaden **notificaciones** con permiso en tiempo de ejecución y, por último, se genera un **APK firmado en modo release** que se instala en un dispositivo real.
@@ -56,7 +58,7 @@ Al entrar en Home se elimina Login de la pila (`popUpTo(Routes.LOGIN) { inclusiv
 
 | Pantalla | Qué debe mostrarse | Captura |
 | --- | --- | --- |
-| Login | Campos de email y contraseña, casilla «Recordar sesión», botones Entrar y Registro | Captura 1 |
+| Login | Campos de email y contraseña, casilla «Recordar sesión», botones Entrar y Registro | Captura 1.1 |
 | Home con lista vacía | Cabecera con el email, título «Mis videojuegos», mensaje «Todavía no has añadido videojuegos» y FAB (+) | Captura 2b |
 | Home con lista | Tarjetas con título, plataforma · género · año, nota, casilla de completado y papelera | Captura 2 |
 | Diálogo nuevo videojuego | Formulario con título, plataforma, género, año, nota y «Completado» | Captura 3 |
@@ -67,9 +69,9 @@ Elementos de interfaz utilizados: `Scaffold`, `TopAppBar` con menú overflow (Ac
 
 ### Capturas de la aplicación
 
-*Captura 1. Pantalla de registro: nombre, email, contraseña, confirmación y casilla «Recordar sesión».*
+*Captura 1.1. Pantalla de registro: nombre, email, contraseña, confirmación y casilla «Recordar sesión».*
 
-![Captura 1: Pantalla de registro](Capturas/1.jpeg)
+![Captura 1.1: Pantalla de registro](Capturas/1.1.jpeg)
 
 *Captura 2. Home con la lista de videojuegos: plataforma, género, año, nota, casilla de completado y papelera.*
 
@@ -143,7 +145,7 @@ La validación del formulario de videojuegos se ejecuta al pulsar «Guardar». S
 | Nota | Número decimal entre 0 y 10; se normaliza la coma a punto antes de convertir | «La nota debe estar entre 0 y 10» |
 | Completado | Casilla booleana, valor por defecto `false` | (ninguno) |
 
-Además, los teclados se adaptan al tipo de dato (`KeyboardType.Number` para el año y `KeyboardType.Decimal` para la nota), y los textos se recortan con `trim()` antes de guardarlos. La validación de Login y Registro es la implementada en la Actividad 2.2: \[describir brevemente las reglas de email y contraseña\].
+Además, los teclados se adaptan al tipo de dato (`KeyboardType.Number` para el año y `KeyboardType.Decimal` para la nota), y los textos se recortan con `trim()` antes de guardarlos. La validación de Login y Registro es la implementada en la Actividad 2.2: el email debe tener al menos 3 letras (puede incluir números) y contener siempre una @ seguida de un dominio; la contraseña debe tener 8 caracteres, con letras, al menos una mayúscula y al menos un número.
 
 ## 6. Estrategia de persistencia
 
@@ -196,12 +198,12 @@ La tabla `videojuegos` tiene las columnas `id` (clave primaria autogenerada), `t
 | Aspecto | Valor |
 | --- | --- |
 | Tipo de artefacto | APK firmado, variante `release`, esquema de firma V2 |
-| Ruta del keystore | `C:\Users\[usuario]\keystores\login.jks` (fuera del proyecto, no subido a Git; la contraseña no se incluye en este documento) |
+| Ruta del keystore | `C:\Users\andre\keystores\login.jks` (fuera del proyecto, no subido a Git; la contraseña no se incluye en este documento) |
 | Alias de la clave | `login` |
 | Validez de la clave | 25 años |
 | Ruta del APK | `app/release/app-release.apk` |
-| Dispositivo utilizado | \[Marca, modelo y versión de Android\] |
-| Método de instalación | \[USB con adb / transferencia de archivo / adb inalámbrico\] |
+| Dispositivo utilizado | Xiaomi Redmi 10C, Android 13|
+| Método de instalación | conexion por USB |
 
 Generación del APK en Android Studio: `Build` → `Generate Signed Bundle / APK...` → `APK` → crear o seleccionar el keystore → alias `login` → variante `release` → `Create`.
 
@@ -236,7 +238,7 @@ Salida obtenida: `Verifies`, `Verified using v1 scheme (JAR signing): false` y `
 Instalación en el dispositivo real (depuración USB activada):
 
 ```
-& "[ANDROID_HOME]\platform-tools\adb.exe" uninstall com.ejemplo.login
+& "[ANDROID_HOME]\platform-tools\adb.exe" uninstall com.example.login
 & "[ANDROID_HOME]\platform-tools\adb.exe" install -r app\build\outputs\apk\release\app-release.apk
 ```
 
@@ -259,20 +261,20 @@ Pruebas realizadas en el emulador:
 | Caso | Descripción | Resultado esperado | Resultado obtenido | Captura |
 | --- | --- | --- | --- | --- |
 | 1 | Abrir la app por primera vez | Se muestra Login | OK | — |
-| 2 | Login sin «Recordar sesión» | Navega a Home | [OK] | Captura 2 |
+| 2 | Login sin «Recordar sesión» | Navega a Home | OK | Captura 2 |
 | 3 | Cerrar y abrir la app tras el login sin «Recordar sesión» | Vuelve a Login (no se recuerda la sesión) | OK | — |
 | 4 | Login con «Recordar sesión» | Navega a Home | OK | — |
-| 5 | Cerrar y abrir la app con «Recordar sesión» activo | Entra directamente a Home (auto-login) | [OK] | Captura 2 |
+| 5 | Cerrar y abrir la app con «Recordar sesión» activo | Entra directamente a Home (auto-login) | OK | Captura 23 |
 | 6 | Cerrar sesión | Vuelve a Login | OK | — |
 | 7 | Cerrar y abrir la app tras cerrar sesión | Se muestra Login (sesión limpiada) | OK | — |
 | 8 | Ir a Registro desde Login | Se muestra la pantalla de Registro | OK | — |
 | 9 | Rellenar Registro con datos válidos | Navega a Home | OK | — |
-| 10 | Añadir un videojuego | Aparece en la lista y se muestra la notificación | [OK] | Capturas 18 y 11 |
+| 10 | Añadir un videojuego | Aparece en la lista y se muestra la notificación | OK | Capturas 18 y 11 |
 | 11 | Editar un videojuego | El cambio se refleja en la lista | OK | — |
-| 12 | Borrar un videojuego | Diálogo de confirmación y desaparece de la lista | [OK] | Capturas 19 y 20 |
+| 12 | Borrar un videojuego | Diálogo de confirmación y desaparece de la lista | OK | Capturas 19 y 20 |
 | 13 | Rotar la pantalla | El estado se mantiene | OK | — |
 | 14 | Cerrar la app y volver a abrirla | Los videojuegos siguen ahí | OK | — |
-| 15 | Rechazar el permiso de notificaciones | La app funciona sin notificación | [OK] | Capturas 9 y 10 |
+| 15 | Rechazar el permiso de notificaciones | La app funciona sin notificación | OK | Capturas 9 y 10 |
 | 16 | Probar con TalkBack | Todos los elementos se anuncian | OK | — |
 
 Pruebas complementarias realizadas: edición de un videojuego sin notificación, rotación de pantalla (la lista se mantiene), cierre y reapertura de la app (los datos persisten), cierre de sesión (vuelve a Login y la sesión queda limpia) y prueba con TalkBack. En el dispositivo real se comprobó: instalación sin errores, login con «Recordar sesión», alta de videojuego con notificación, auto-login tras cerrar la app y cierre de sesión.
@@ -285,9 +287,9 @@ Caso 2:
 
 Caso 5:
 
-*Captura 2. Home mostrado directamente al reabrir la app con «Recordar sesión» activo (auto-login).*
+*Captura 23. Home mostrado directamente al reabrir la app con «Recordar sesión» activo (auto-login).*
 
-![Captura 2: Home tras el auto-login](Capturas/2.jpeg)
+![Captura 2: Home tras el auto-login](Capturas/23.jpeg)
 
 Caso 10:
 
@@ -301,7 +303,7 @@ Caso 10:
 
 Caso 12:
 
-*Captura 19. Videojuego selecionado para poder eliminarlo.*
+*Captura 19. Videojuego seleccionado para poder eliminarlo.*
 
 ![Captura 19: Eliminar videojuego](Capturas/19.jpeg)
 
@@ -331,8 +333,6 @@ Pruebas complementarias:
 
 ## 10. Dificultades encontradas
 
-Conservar únicamente las que realmente se hayan dado y completar con las propias.
-
 | Dificultad | Causa | Solución aplicada |
 | --- | --- | --- |
 | Errores en rojo en `NavGraph.kt` durante los primeros pasos | El archivo usa clases (`AppDatabase`, repositorio, ViewModel, nuevo `HomeScreen`) que se crean en pasos posteriores | Continuar con los pasos y compilar al terminar el CRUD |
@@ -342,6 +342,7 @@ Conservar únicamente las que realmente se hayan dado y completar con las propia
 | La notificación no aparecía | Faltaba el canal o el permiso no estaba concedido | Llamar a `createChannel` en `MainActivity` y revisar el permiso |
 | `INSTALL_FAILED_UPDATE_INCOMPATIBLE` / «App not installed» | Firma distinta a la de la app ya instalada | Desinstalar la app antes de instalar el APK release |
 | La app se cerraba en release al usar Room | ProGuard eliminaba clases | Añadir reglas de ProGuard para Room, corrutinas y DataStore |
+| `DELETE_FAILED_INTERNAL_ERROR` al ejecutar `adb uninstall` en el dispositivo real | La app aún no estaba instalada en ese dispositivo, así que no había nada que desinstalar | Ignorar el aviso y ejecutar `adb install -r`, que terminó con «Success» (Captura 16) |
 
 ## 11. Conclusiones
 
